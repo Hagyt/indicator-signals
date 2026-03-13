@@ -1,13 +1,13 @@
 # Crypto Signal App — Task Plan
 
-## Phase 1: Research & Technology Selection
-- [ ] **1.1** Research and select the best Python libraries for fetching market data (OHLCV) across crypto (and later forex/stocks). Compare `ccxt`, `python-binance`, and alternatives.
-- [ ] **1.2** Research and select the best technical analysis library for computing indicators and divergences. Compare `pandas-ta`, `ta-lib`, `ta`, and alternatives.
-- [ ] **1.3** Identify the best data sources for crypto indices (`TOTAL`, `TOTAL2`, `TOTAL3`) and individual assets (`BTC`, `ETH`). Evaluate free/freemium APIs (Binance, CoinGecko, CryptoCompare, TradingView unofficial, etc.).
-- [ ] **1.4** Research SMT (Smart Money Technique) divergence calculation: definition, required data, detection algorithm between correlated assets.
-- [ ] **1.5** Evaluate UI/interface options that require zero frontend/styling effort. Compare Streamlit, Gradio, Textual (TUI), CLI with `rich`/`typer`.
-- [ ] **1.6** Evaluate signal delivery channels: Telegram bot, Discord webhook, email. Select libraries.
-- [ ] **1.7** Evaluate scheduling/orchestration tools for periodic signal checks (`APScheduler`, `Celery`, cron-based).
+## Phase 1: Research & Technology Selection ✅
+- [x] **1.1** Research and select the best Python libraries for fetching market data (OHLCV) across crypto (and later forex/stocks). Compare `ccxt`, `python-binance`, and alternatives. → **Selected: `ccxt`**
+- [x] **1.2** Research and select the best technical analysis library for computing indicators and divergences. Compare `pandas-ta`, `ta-lib`, `ta`, and alternatives. → **Selected: `pandas-ta`**
+- [x] **1.3** Identify the best data sources for crypto indices (`TOTAL`, `TOTAL2`, `TOTAL3`) and individual assets (`BTC`, `ETH`). Evaluate free/freemium APIs (Binance, CoinGecko, CryptoCompare, TradingView unofficial, etc.). → **Selected: Binance (primary) + CoinGecko (indices)**
+- [x] **1.4** Research SMT (Smart Money Technique) divergence calculation: definition, required data, detection algorithm between correlated assets. → **Documented: pivot-based swing detection + time-aligned comparison**
+- [x] **1.5** Evaluate UI/interface options that require zero frontend/styling effort. Compare Streamlit, Gradio, Textual (TUI), CLI with `rich`/`typer`. → **Selected: Streamlit (primary) + Rich/Typer (CLI)**
+- [x] **1.6** Evaluate signal delivery channels: Telegram bot, Discord webhook, email. Select libraries. → **Selected: `apprise` (unified)**
+- [x] **1.7** Evaluate scheduling/orchestration tools for periodic signal checks (`APScheduler`, `Celery`, cron-based). → **Selected: `APScheduler 3.x`**
 
 ## Phase 2: Architecture & Domain Design (DDD)
 - [ ] **2.1** Define bounded contexts: Market Data, Signal Engine, Notification, Configuration.
@@ -65,4 +65,4 @@
 
 ---
 
-> **Next step:** Begin Phase 1 — Research & Technology Selection, one task at a time.
+> **Next step:** Begin Phase 2 — Architecture & Domain Design (DDD), one task at a time.
