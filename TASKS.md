@@ -10,8 +10,8 @@
 - [x] **1.7** Evaluate scheduling/orchestration tools for periodic signal checks (`APScheduler`, `Celery`, cron-based). → **Selected: `APScheduler 3.x`**
 
 ## Phase 2: Architecture & Domain Design (DDD)
-- [ ] **2.1** Define bounded contexts: Market Data, Signal Engine, Notification, Configuration.
-- [ ] **2.2** Define domain entities, value objects, and aggregates (Asset, Timeframe, Signal, Divergence, MarketData, etc.).
+- [x] **2.1** Define bounded contexts: Market Data, Signal Engine, Notification, Configuration. → **Documented: 4 bounded contexts with ports, adapters, and event flows** ([design/2_1_bounded_contexts.md](design/2_1_bounded_contexts.md))
+- [x] **2.2** Define domain entities, value objects, and aggregates (Asset, Timeframe, Signal, Divergence, MarketData, etc.). → **Documented: 12 VOs, 1 entity, 3 aggregates** ([design/2_2_domain_entities_value_objects.md](design/2_2_domain_entities_value_objects.md))
 - [ ] **2.3** Define domain events (e.g., `DivergenceDetected`, `SignalEmitted`).
 - [ ] **2.4** Design the plugin/modular system for strategies and indicators (registry pattern, abstract base classes or Protocols) so adding a new signal is as simple as dropping a file.
 - [ ] **2.5** Design the market abstraction layer so crypto, forex, and stocks can be swapped by changing the data provider.
